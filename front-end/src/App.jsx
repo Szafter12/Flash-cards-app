@@ -16,6 +16,8 @@ function App() {
 		}, 3000)
 	}, [])
 
+	const memoizedFunction = useCallback(() => {}, [])
+
 		
 	return (
 		<main className={styles.main}>
@@ -27,7 +29,7 @@ function App() {
 				{isPanelShow ? 'Schowaj panel' : 'Pokaż panel'}
 			</Button>
 			{isPanelShow && <Panel onError={handleError} />}
-			<SubPageMemo isPanelShown={isPanelShow}/>
+			<SubPageMemo isPanelShown={isPanelShow} func={memoizedFunction}/>
 		</main>
 	)
 }
