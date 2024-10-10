@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import styles from './SubPage.module.css'
 
-export function SubPage({ isPanelShown }) {
+export const SubPageMemo = memo(function SubPage({ isPanelShown }) {
 	console.log(isPanelShown);
 	return (
 		<section className={styles.section}>
@@ -36,6 +36,4 @@ export function SubPage({ isPanelShown }) {
 			</p>
 		</section>
 	)
-}
-
-export const SubPageMemo = memo(SubPage)
+})
