@@ -1,9 +1,8 @@
-import { useState, useCallback} from 'react'
+import { useState, useCallback } from 'react'
 import styles from './App.module.css'
 import { Panel } from './components/Panel/Panel'
 import { Button } from './components/Button/Button'
 import { ErrorMessage } from './components/ErrorMessage/ErrorMessage'
-import { SubPage } from './components/SubPage/SubPage'
 
 function App() {
 	const [isPanelShow, setIsPanelShown] = useState(true)
@@ -16,9 +15,6 @@ function App() {
 		}, 3000)
 	}, [])
 
-	const memoizedFunction = useCallback(() => {}, [])
-
-		
 	return (
 		<main className={styles.main}>
 			{error && <ErrorMessage>{error}</ErrorMessage>}
@@ -29,7 +25,6 @@ function App() {
 				{isPanelShow ? 'Schowaj panel' : 'Pokaż panel'}
 			</Button>
 			{isPanelShow && <Panel onError={handleError} />}
-			<SubPage isPanelShown={isPanelShow} func={memoizedFunction}/>
 		</main>
 	)
 }
