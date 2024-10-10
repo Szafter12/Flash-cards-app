@@ -3,7 +3,7 @@ import styles from './App.module.css'
 import { Panel } from './components/Panel/Panel'
 import { Button } from './components/Button/Button'
 import { ErrorMessage } from './components/ErrorMessage/ErrorMessage'
-import { SubPageMemo } from './components/SubPage/SubPage'
+import { SubPage } from './components/SubPage/SubPage'
 
 function App() {
 	const [isPanelShow, setIsPanelShown] = useState(true)
@@ -29,7 +29,7 @@ function App() {
 				{isPanelShow ? 'Schowaj panel' : 'Pokaż panel'}
 			</Button>
 			{isPanelShow && <Panel onError={handleError} />}
-			<SubPageMemo isPanelShown={isPanelShow} func={memoizedFunction}/>
+			<SubPage isPanelShown={isPanelShow} func={memoizedFunction}/>
 		</main>
 	)
 }

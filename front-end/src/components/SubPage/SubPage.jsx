@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import styles from './SubPage.module.css'
 
-export const SubPageMemo = memo(function SubPage({ isPanelShown }) {
+export const SubPage = memo(function SubPage({ isPanelShown }) {
 	console.log(isPanelShown);
 	return (
 		<section className={styles.section}>
