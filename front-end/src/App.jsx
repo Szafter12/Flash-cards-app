@@ -3,6 +3,7 @@ import styles from './App.module.css'
 import { Panel } from './components/Panel/Panel'
 import { Button } from './components/Button/Button'
 import { ErrorMessage } from './components/ErrorMessage/ErrorMessage'
+import { Timer } from './components/Timer/Timer'
 
 function App() {
 	const [isPanelShow, setIsPanelShown] = useState(true)
@@ -25,6 +26,7 @@ function App() {
 				{isPanelShow ? 'Schowaj panel' : 'Pokaż panel'}
 			</Button>
 			{isPanelShow && <Panel onError={handleError} />}
+			<Timer />
 		</main>
 	)
 }
