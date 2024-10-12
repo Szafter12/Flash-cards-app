@@ -29,6 +29,18 @@
       "translation": "cating",
       "category": "verb",
       "id": 40
+    },
+    {
+      "word": "kot",
+      "translation": "essa",
+      "category": "noun",
+      "id": 41
+    },
+    {
+      "word": "essaes",
+      "translation": "essa",
+      "category": "noun",
+      "id": 42
     }
   ]
 }
